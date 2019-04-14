@@ -1,0 +1,23 @@
+$heading-devider-bg: rgba(0, 0 , 0, 0.125);
+$heading-devider-aksen: purple;
+
+.heading-page {
+  .heading-title {
+    font-size: convert-rem(22px);
+    margin: 0;
+  }
+
+  .heading-devider {
+    background-color: $heading-devider-bg;
+    height: 2px;
+    margin: 10px 0 20px;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: $heading-devider-aksen;
+      width: 150px;
+    }
+  }
+}
