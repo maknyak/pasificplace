@@ -9,17 +9,17 @@ $bootstrap-sass-asset-helper: false !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;
-$gray-darker:            #101010; // @edit lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              #9a9a9a; // @edit lighten($gray-base, 20%) !default;   // #333
-$gray:                   #dfdfdf; // @edit lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             #f7f7f7; // @edit lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           #f0f0f0; // @edit lighten($gray-base, 93.5%) !default; // #eee
+$gray-darker:            rgba(16, 16, 16, 1); // @edit lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              rgba(154, 154, 154, 1); // @edit lighten($gray-base, 20%) !default;   // #333
+$gray:                   rgba(223, 223, 223, 1); // @edit lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             rgba(247, 247, 247, 1); // @edit lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           rgba(240, 240, 240, 1); // @edit lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         #454e74; // @edit darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #00b600; // @edit #5cb85c !default;
 $brand-info:            #1c9a8a; // @edit #5bc0de !default;
 $brand-warning:         #f5a623; // @edit #f0ad4e !default;
-$brand-danger:          #cc0000; // @edit #d9534f !default;
+$brand-danger:          #dc3545; // @edit #d9534f !default;
 
 
 //== Scaffolding
@@ -49,7 +49,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          12px; // @edit 14px !default;
+$font-size-base:          13px; // @edit 14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * .85)) !default; // ~12px
 
@@ -134,13 +134,13 @@ $table-condensed-cell-padding:  5px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default;
+$table-bg-accent:               $gray-light; // @edit #f9f9f9 !default;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                #f5f5f5 !default;
+$table-bg-hover:                $gray-light; // @edit #f5f5f5 !default;
 $table-bg-active:               $table-bg-hover !default;
 
 //** Border color for table and cell borders.
-$table-border-color:            #dfdfdf; // @edit #ddd !default;
+$table-border-color:            $gray; // @edit #ddd !default;
 
 
 //== Buttons
@@ -149,9 +149,9 @@ $table-border-color:            #dfdfdf; // @edit #ddd !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
-$btn-default-border:             #ccc !default;
+$btn-default-color:              $gray-darker; // @edit #333 !default;
+$btn-default-bg:                 $gray-lighter; // @edit #fff !default;
+$btn-default-border:             $gray; // @edit #ccc !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -191,9 +191,9 @@ $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray !default;
+$input-color:                    $gray-darker; // @edit $gray !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   $gray; // @edit #ccc !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -454,17 +454,17 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 
 $pagination-color:                     $link-color !default;
 $pagination-bg:                        #fff !default;
-$pagination-border:                    #ddd !default;
+$pagination-border:                    $gray; // @edit #ddd !default;
 
 $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $gray-lighter !default;
-$pagination-hover-border:              #ddd !default;
+$pagination-hover-border:              $gray; // @edit #ddd !default;
 
 $pagination-active-color:              #fff !default;
-$pagination-active-bg:                 $brand-primary !default;
-$pagination-active-border:             $brand-primary !default;
+$pagination-active-bg:                 $brand-info; // @edit $brand-primary !default;
+$pagination-active-border:             $brand-info; // @edit $brand-primary !default;
 
-$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-color:            $gray; // @edit $gray-light !default;
 $pagination-disabled-bg:               #fff !default;
 $pagination-disabled-border:           #ddd !default;
 
@@ -501,21 +501,21 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-text:             #fff; // @edit #3c763d !default;
+$state-success-bg:               $brand-success; // @edit #dff0d8 !default;
+$state-success-border:           $brand-success; // @edit darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-text:                #fff; // @edit #31708f !default;
+$state-info-bg:                  $brand-info; // @edit #d9edf7 !default;
+$state-info-border:              $brand-info; // @edit darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-text:             #fff; // @edit #8a6d3b !default;
+$state-warning-bg:               $brand-warning; // @edit #fcf8e3 !default;
+$state-warning-border:           $brand-warning; // @edit darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-danger-text:              #fff; // @edit #a94442 !default;
+$state-danger-bg:                $brand-danger; // @edit #f2dede !default;
+$state-danger-border:            $brand-danger; // @edit darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
 //== Tooltips
@@ -570,7 +570,7 @@ $popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%
 //##
 
 //** Default label background color
-$label-default-bg:            $gray-light !default;
+$label-default-bg:            $gray-dark; // @edit $gray-light !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color
@@ -717,9 +717,9 @@ $panel-border-radius:         $border-radius-base !default;
 $panel-inner-border:          #ddd !default;
 $panel-footer-bg:             #f5f5f5 !default;
 
-$panel-default-text:          $gray-dark !default;
-$panel-default-border:        #ddd !default;
-$panel-default-heading-bg:    #f5f5f5 !default;
+$panel-default-text:          $gray-darker; // @edit $gray-dark !default;
+$panel-default-border:        $gray; // @edit #ddd !default;
+$panel-default-heading-bg:    $gray-lighter; // @edit#f5f5f5 !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -776,7 +776,7 @@ $well-border:                 darken($well-bg, 7%) !default;
 $badge-color:                 #fff !default;
 //** Linked badge text color on hover
 $badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
+$badge-bg:                    $gray-dark; // @edit $gray-light !default;
 
 //** Badge text color in active nav link
 $badge-active-color:          $link-color !default;
@@ -853,22 +853,22 @@ $pre-scrollable-max-height:   340px !default;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
-$text-muted:                  $gray-light !default;
+$text-muted:                  $gray; // @edit $gray-light !default;
 //** Abbreviations and acronyms border color
-$abbr-border-color:           $gray-light !default;
+$abbr-border-color:           $gray; // @edit $gray-light !default;
 //** Headings small color
-$headings-small-color:        $gray-light !default;
+$headings-small-color:        $gray; // @edit $gray-light !default;
 //** Blockquote small color
-$blockquote-small-color:      $gray-light !default;
+$blockquote-small-color:      $gray; // @edit $gray-light !default;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
 //** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
+$blockquote-border-color:     $gray-dark; // @edit $gray-lighter !default;
 //** Page header border color
-$page-header-border-color:    $gray-lighter !default;
+$page-header-border-color:    $gray; // @edit $gray-lighter !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Point at which .dl-horizontal becomes horizontal
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
-$hr-border:                   $gray-lighter !default;
+$hr-border:                   $gray; // @edit $gray-lighter !default;
