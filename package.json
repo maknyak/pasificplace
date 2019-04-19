@@ -16,7 +16,7 @@
   "author": "Ian Maulana",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap-sass": "^3.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
