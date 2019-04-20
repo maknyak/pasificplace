@@ -1,10 +1,10 @@
-# Color scheme for pasific place
+# Color Scheme for Pasific Place
 
-# How to run:
+## How to Run:
 1. npm run install: Untuk mendownload depedency
 2. npm run serve: Untuk live editing bootstrap component
 
-# Folder structure
+## Folder Structure
 * __public__
   * __css:__ berikan hasil compile file bootstrap
   * __js:__ tambahkan depedency jika dibutuhkan
