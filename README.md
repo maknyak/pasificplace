@@ -16,11 +16,11 @@
     * __heading:__ custom page title style
     * __tabs:__ custom tabs style 
     * __utility__
-      * __border.scss:__ berfungsi menghilangkan border, misal: border-none, border-left-none, dsb.
-      * __margin-padding.scss:__ berfungsi untuk membuat padding/margin menggunakan class. misal: pl-10: padding-left: 10px, mx-20: margin-left & margin-right bernilai 20px. dsb
+      * __border.scss:__ berfungsi menghilangkan border, misal: `border-none`, `border-left-none`, dsb.
+      * __margin-padding.scss:__ berfungsi untuk membuat padding/margin menggunakan class. misal: `pl-10`: padding-left: 10px, `mx-20`: margin-left & margin-right bernilai 20px. dsb
       * __size-function.scss:__ converter dari px to rem dengan default base size 16px
-      * __sizing.scss:__ sizing class seperti fontsize-12: merubah font jadi 12px. width-100: merubah lebar jadi 100px
+      * __sizing.scss:__ sizing class seperti `fontsize-12`: merubah font jadi 12px. `width-100`: merubah lebar jadi 100px
       * __utility.scss:__ grouping penggunaan utility scss, import yang digunakan saja. file utility.scss ini nantinya agar bisa digunakan harus diimport di main.scss
    * __main.scss:__ import selurus file scss yang akan digunakan
 
-> _catatan: tambahkan underscore (_) ketika membuat file scss agar hasil compile tidak generate._ 
+> _catatan: tambahkan underscore (`_`) ketika membuat file scss agar hasil compile tidak generate. contoh: `_dropdown.scss`_ 
