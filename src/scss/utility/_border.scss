@@ -1,0 +1,23 @@
+$sides: (top, bottom, left, right, x, y); // Leave this variable alone
+
+.border-none {
+  border: none !important;
+}
+
+@each $side in $sides {
+  @if $side == 'x' {
+    .border-#{$side}-none {
+      border-left: none !important;
+      border-right: none !important;
+    }
+  } @else if $side == 'y' {
+    .border-#{$side}-none {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+  } @else {
+    .border-#{$side}-none {
+      border-#{$side}: none !important;
+    }
+  }
+}

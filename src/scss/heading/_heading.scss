@@ -1,16 +1,23 @@
-$heading-devider-bg: rgba(0, 0 , 0, 0.125);
-$heading-devider-aksen: purple;
+$heading-devider-bg: $gray;
+$heading-devider-aksen: $brand-info;
 
 .heading-page {
+  position: relative;
+  margin-bottom: 30px;
+
   .heading-title {
-    font-size: convert-rem(22px);
-    margin: 0;
+    font-size: convert-rem(32px);
+    margin: 10px 0 0;
+  }
+
+  .heading-tools {
+    margin-top: 15px;
   }
 
   .heading-devider {
     background-color: $heading-devider-bg;
     height: 2px;
-    margin: 10px 0 20px;
+    margin: 15px 0 20px;
 
     &::after {
       content: '';

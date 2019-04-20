@@ -579,6 +579,14 @@ textarea.form-control {
     }
   }
 
+  @media (max-width: $screen-sm-min) {
+    .control-label {
+      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
   // Validation states
   //
   // Reposition the icon because it's now within a grid column and columns have
@@ -607,4 +615,47 @@ textarea.form-control {
       }
     }
   }
+}
+
+.form-responsive {
+  position: relative;
+
+  @media(min-width: $screen-md) {
+    position: absolute;
+    top: -5px;
+    right: 0;
+  }
+
+  .form-group {
+    .control-label {
+      width: 15%;
+      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      text-align: left;
+    }
+  
+    .form-control {
+      display: inline-block;
+      width: 80%;
+      float: right;
+    }
+  }
+
+  @media(min-width: $screen-md) { 
+      position: absolute;
+      .form-group {
+        display: inline-block;
+  
+        .control-label {
+          width: 55px;
+          margin-right: 25px;
+          text-align: right;
+        }
+  
+        .form-control {
+          display: inline-block;
+          width: 150px;
+        }
+      }
+    }
+  
 }

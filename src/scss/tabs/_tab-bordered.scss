@@ -1,0 +1,35 @@
+.nav-tabs-bordered {
+  border-bottom: 2px solid $gray;
+  
+  > li {
+    float: left;
+    margin-bottom: -1px;
+
+    > a {
+      color: $gray-dark;
+      margin-right: 2px;
+      line-height: 1.42857;
+      border: 1px solid transparent;
+      border-radius: 0 0 0 0;
+
+      &:active,
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border-bottom: 2px solid $brand-info;
+        color: $gray-darker;
+      }
+    }
+
+    &.active {
+      > a {
+        border-bottom: 2px solid $brand-info;
+        color: $gray-darker;
+      }
+    }
+  }
+}
+
