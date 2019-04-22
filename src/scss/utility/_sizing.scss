@@ -1,8 +1,53 @@
 @import "./sizing-function";
 
-.fontsize-12 {
-  font-size: convert-rem(12px);
+.fontsize-32 {
+  font-size: convert-em(32px) !important;
 }
+
+.fontsize-30 {
+  font-size: convert-em(30px) !important;
+}
+
+.fontsize-28 {
+  font-size: convert-em(28px) !important;
+}
+
+.fontsize-26 {
+  font-size: convert-em(26px) !important;
+}
+
+.fontsize-24 {
+  font-size: convert-em(24px) !important;
+}
+
+.fontsize-22 {
+  font-size: convert-em(22px) !important;
+}
+
+.fontsize-20 {
+  font-size: convert-em(20px) !important;
+}
+
+.fontsize-18 {
+  font-size: convert-em(18px) !important;
+}
+
+.fontsize-16 {
+  font-size: convert-em(16px) !important;
+}
+
+.fontsize-14 {
+  font-size: convert-em(14px) !important;
+}
+
+.fontsize-12 {
+  font-size: convert-em(12px) !important;
+}
+
+.fontsize-10 {
+  font-size: convert-em(10px) !important;
+}
+
 
 .width-100 {
   width: 100px;

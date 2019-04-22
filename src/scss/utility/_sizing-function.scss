@@ -1,5 +1,9 @@
-$base-size: 16px;
+// $base-size: 16px;
 
-@function convert-rem($size) {
-  @return $size / $base-size * 1rem;
+// @function convert-em($size) {
+//   @return $size / $base-size * 1em;
+// }
+
+@function convert-em($size) {
+  @return $size;
 }

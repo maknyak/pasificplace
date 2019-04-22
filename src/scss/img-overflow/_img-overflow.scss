@@ -1,0 +1,23 @@
+.img-overflow {
+  height: 105px;
+  width: 105px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  
+  .img-overflow-frame {
+    display: block;
+    overflow: hidden;
+    background: #ddd;
+    height: 100%;
+    position: relative;
+
+    .img-overflow-item {
+      width: 200px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

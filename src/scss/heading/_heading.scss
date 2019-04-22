@@ -6,7 +6,7 @@ $heading-devider-aksen: $brand-info;
   margin-bottom: 30px;
 
   .heading-title {
-    font-size: convert-rem(32px);
+    font-size: 24px;
     margin: 10px 0 0;
   }
 
@@ -24,7 +24,7 @@ $heading-devider-aksen: $brand-info;
       display: block;
       height: 2px;
       background-color: $heading-devider-aksen;
-      width: 150px;
+      width: 190px;
     }
   }
 }
